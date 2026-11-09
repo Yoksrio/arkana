@@ -1,0 +1,144 @@
+/* Base: reinicio, tipografía, fondo de escritorio, foco y movimiento reducido. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-noche);
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-m);
+  line-height: var(--interlineado);
+  color: var(--color-texto-claro);
+  background:
+    radial-gradient(ellipse 120% 80% at 50% 0%, var(--color-madera-clara) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 120%, var(--color-madera) 0%, transparent 70%),
+    var(--color-escritorio);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--textura-ruido);
+  opacity: var(--opacidad-ruido);
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 55%, var(--color-sombra) 100%);
+  z-index: 0;
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulo);
+  font-weight: 400;
+  line-height: var(--interlineado-titulo);
+  margin: 0 0 var(--esp-3);
+}
+
+p {
+  margin: 0 0 var(--esp-3);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--color-oro-claro);
+}
+
+::selection {
+  background: var(--color-oro-oscuro);
+  color: var(--color-papel-claro);
+}
+
+:focus-visible {
+  outline: var(--borde-grueso) solid var(--color-oro-claro);
+  outline-offset: 3px;
+}
+
+h1:focus {
+  outline: none;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-oro-oscuro) transparent;
+}
+
+.saltar {
+  position: absolute;
+  left: var(--esp-4);
+  top: calc(-1 * var(--esp-8));
+  z-index: var(--capa-aviso);
+  padding: var(--esp-2) var(--esp-4);
+  background: var(--color-papel);
+  color: var(--color-tinta);
+}
+
+.saltar:focus {
+  top: var(--esp-4);
+}
+
+.vista {
+  animation: aparecer var(--t-medio) var(--curva) both;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+.sin-movimiento *,
+.sin-movimiento *::before,
+.sin-movimiento *::after {
+  animation-duration: 1ms !important;
+  animation-delay: 0ms !important;
+  transition-duration: 1ms !important;
+}

@@ -1,0 +1,151 @@
+/*
+ * Tokens de diseño: ÚNICO sitio de colores, tipografías, tamaños, espaciados, sombras y tiempos
+ * (CLAUDE.md, regla 4). El resto del CSS solo usa estas variables.
+ */
+:root {
+  /* Colores · escritorio y madera */
+  --color-noche: #0d0a08;
+  --color-escritorio: #17110d;
+  --color-madera: #2a1d14;
+  --color-madera-clara: #3b2a1d;
+  --color-sombra: rgba(0, 0, 0, 0.55);
+  --color-velo: rgba(8, 6, 4, 0.82);
+  --color-velo-fuerte: rgba(8, 6, 4, 0.7);
+  --color-velo-periodicos: rgba(28, 18, 10, 0.55);
+
+  /* Colores · cuero del cuaderno */
+  --color-cuero: #4a2b19;
+  --color-cuero-claro: #6e4327;
+  --color-cuero-oscuro: #26150c;
+  --color-costura: rgba(216, 189, 126, 0.4);
+  --color-lomo: rgba(60, 35, 15, 0.28);
+  --color-canto: #d9c69c;
+
+  /* Colores · papel y tinta */
+  --color-papel: #e9dcc0;
+  --color-papel-claro: #f3e9d2;
+  --color-papel-oscuro: #cdb98f;
+  --color-manila: #c9a86a;
+  --color-manila-oscuro: #a9874c;
+  --color-tinta: #2b211a;
+  --color-tinta-suave: #5d4c3c;
+  --color-tinta-azul: #23324a;
+
+  /* Colores · acentos */
+  --color-oro: #b8964f;
+  --color-oro-claro: #d8bd7e;
+  --color-oro-oscuro: #7d6230;
+  --color-rojo: #8e2a22;
+  --color-rojo-claro: #b5453a;
+  --color-rojo-oscuro: #5e1a15;
+  --color-verde: #4f6b3a;
+  --color-texto-claro: #e6d8bb;
+  --color-texto-apagado: #9c8b72;
+
+  /* Colores · transparencias */
+  --color-oro-velo: rgba(184, 150, 79, 0.15);
+  --color-oro-tenue: rgba(184, 150, 79, 0.25);
+  --color-oro-resalte: rgba(184, 150, 79, 0.4);
+  --color-manila-velo: rgba(201, 168, 106, 0.1);
+  --color-manila-tenue: rgba(201, 168, 106, 0.22);
+  --color-rojo-velo: rgba(142, 42, 34, 0.07);
+  --color-rojo-tenue: rgba(142, 42, 34, 0.4);
+  --color-rojo-sello: rgba(142, 42, 34, 0.55);
+  --color-noche-velo: rgba(13, 10, 8, 0.55);
+  --color-noche-barra: rgba(13, 10, 8, 0.92);
+  --color-papel-velo: rgba(243, 233, 210, 0.85);
+  --color-luz: rgba(255, 255, 255, 0.15);
+  --color-luz-fuerte: rgba(255, 255, 255, 0.3);
+  --color-tinta-renglon: rgba(35, 50, 74, 0.18);
+  --color-sombra-tenue: rgba(0, 0, 0, 0.12);
+
+  /* Colores · ilustraciones */
+  --color-mar: #c9cfc4;
+  --color-mar-oscuro: #8fa09a;
+  --color-tierra: #dccaa0;
+  --color-vidrio: #2f3b37;
+  --color-hierro: #6e6a5c;
+  --color-planta: #556b3c;
+  --color-flor: #d9b8c4;
+  --color-piedra: #b7aa92;
+  --color-piedra-sombra: #8f8470;
+  --color-cielo-foto: #d6ccb6;
+  --color-bronce: #8a6a35;
+
+  /* Tipografías */
+  --fuente-titulo: "IM Fell English", "Cormorant Garamond", Georgia, serif;
+  --fuente-texto: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --fuente-maquina: "Special Elite", "Courier New", Courier, monospace;
+
+  /* Tamaños de letra */
+  --texto-xs: 0.78rem;
+  --texto-s: 0.9rem;
+  --texto-m: 1.06rem;
+  --texto-l: 1.3rem;
+  --texto-xl: 1.75rem;
+  --texto-2xl: 2.4rem;
+  --texto-3xl: clamp(2.6rem, 6vw, 4.6rem);
+  --interlineado: 1.55;
+  --interlineado-titulo: 1.1;
+  --espaciado-letras: 0.18em;
+
+  /* Espaciados */
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 0.75rem;
+  --esp-4: 1rem;
+  --esp-5: 1.5rem;
+  --esp-6: 2rem;
+  --esp-7: 3rem;
+  --esp-8: 4.5rem;
+
+  /* Medidas */
+  --ancho-max: 1280px;
+  --ancho-archivo: 1680px;
+  --ancho-lectura: 68ch;
+  --barra-alto: 3.5rem;
+  --radio: 2px;
+  --radio-tarjeta: 8px;
+  --borde: 1px;
+  --borde-grueso: 2px;
+  --retrato-mini: 1.6rem;
+  --retrato-dialogo: 3.25rem;
+  --ancho-periodico: 52rem;
+  --fondo-periodicos: url("../assets/img/texturas/periodicos.jpg");
+  --retrato-medio: 4.5rem;
+  --retrato-grande: clamp(8rem, 16vw, 11rem);
+  --ancho-indice: 15.5rem;
+  --ancho-panel-portada: 36rem;
+  --ancho-texto-escena: 36rem;
+  --radio-cuaderno: 18px;
+
+  /* Sombras */
+  --sombra-papel: 0 1px 0 var(--color-luz) inset, 0 10px 30px rgba(0, 0, 0, 0.55), 0 2px 4px rgba(0, 0, 0, 0.5);
+  --sombra-suave: 0 4px 14px rgba(0, 0, 0, 0.45);
+  --sombra-texto: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --sombra-cuaderno: 0 30px 60px rgba(0, 0, 0, 0.6), 0 8px 18px rgba(0, 0, 0, 0.5);
+  --sombra-polaroid: 0 3px 8px rgba(0, 0, 0, 0.35);
+  --brillo-oro: 0 0 0 1px var(--color-oro-oscuro), 0 0 18px var(--color-oro-tenue);
+
+  /* Desenfoques */
+  --desenfoque: 14px;
+  --desenfoque-fondo: 22px;
+
+  /* Tiempos */
+  --t-rapido: 150ms;
+  --t-medio: 320ms;
+  --t-lento: 700ms;
+  --t-apertura: 1100ms;
+  --curva: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --curva-sello: cubic-bezier(0.2, 1.6, 0.4, 1);
+
+  /* Texturas */
+  --textura-ruido: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23r)'/%3E%3C/svg%3E");
+  --textura-fibras: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.012 0.4' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 0 0.1 0 0 0 0.12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  --opacidad-ruido: 0.18;
+
+  /* Capas */
+  --capa-barra: 10;
+  --capa-modal: 50;
+  --capa-aviso: 60;
+}

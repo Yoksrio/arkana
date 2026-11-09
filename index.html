@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Arkana · Expedientes para dos mentes: casos de investigación, enigmas y búsqueda del tesoro para jugar en pareja.">
+  <title>Arkana · Expedientes para dos mentes</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-10 -10 20 20'%3E%3Cpath d='M0-9L2 0 0 9-2 0Z M-9 0L0-2 9 0 0 2Z' fill='%23b8964f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/fuentes.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/pantallas.css">
+</head>
+<body>
+  <a class="saltar" href="#app">Ir al contenido</a>
+  <div id="app" class="app"></div>
+  <noscript><p class="vacio">Arkana necesita JavaScript activado.</p></noscript>
+
+  <!-- Motor (el orden importa: D4) -->
+  <script src="js/nucleo.js"></script>
+  <script src="js/utilidades/sha256.js"></script>
+  <script src="js/utilidades/normalizar.js"></script>
+  <script src="js/utilidades/codificar.js"></script>
+  <script src="js/textos.js"></script>
+  <script src="js/reglas.js"></script>
+  <script src="js/estado.js"></script>
+  <script src="js/validacion.js"></script>
+  <script src="js/puntuacion.js"></script>
+  <script src="js/pistas.js"></script>
+  <script src="js/partida.js"></script>
+  <script src="js/comprobar.js"></script>
+  <script src="js/sonido.js"></script>
+  <script src="js/ilustraciones.js"></script>
+  <script src="js/interfaz/ui.js"></script>
+  <script src="js/imagenes.js"></script>
+  <script src="js/detectives.js"></script>
+  <script src="js/clave.js"></script>
+  <script src="js/prensa.js"></script>
+  <script src="js/interfaz/rutas.js"></script>
+  <script src="js/interfaz/documento.js"></script>
+  <script src="js/interfaz/telegrafo.js"></script>
+  <script src="js/interfaz/transcripcion.js"></script>
+  <script src="js/interfaz/hermanas.js"></script>
+  <script src="js/interfaz/inicio.js"></script>
+  <script src="js/interfaz/presentacion.js"></script>
+  <script src="js/interfaz/equipo.js"></script>
+  <script src="js/interfaz/carta.js"></script>
+  <script src="js/interfaz/archivo.js"></script>
+  <script src="js/interfaz/expediente.js"></script>
+  <script src="js/interfaz/cuaderno.js"></script>
+  <script src="js/interfaz/sala-prueba.js"></script>
+  <script src="js/interfaz/sala-paneles.js"></script>
+  <script src="js/interfaz/minijuegos.js"></script>
+  <script src="js/interfaz/minijuegos-tipos.js"></script>
+  <script src="js/interfaz/explicacion.js"></script>
+  <script src="js/interfaz/resolucion.js"></script>
+  <script src="js/interfaz/resueltos.js"></script>
+  <script src="js/interfaz/correspondencia.js"></script>
+  <script src="js/interfaz/prensa.js"></script>
+  <script src="js/interfaz/estadisticas.js"></script>
+  <script src="js/interfaz/ajustes.js"></script>
+
+  <!-- Expedientes: un fichero por caso (docs/juego.md) -->
+  <script src="expedientes/catalogo.js"></script>
+  <script src="expedientes/agencia.js"></script>
+  <script src="expedientes/005-ciudad-perdida.js"></script>
+  <script src="expedientes/006-robo-del-museo.js"></script>
+  <script src="expedientes/008-habitacion-309.js"></script>
+  <script src="expedientes/009-mapa-siete-sellos.js"></script>
+  <script src="expedientes/010-expediente-cero.js"></script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
