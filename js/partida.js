@@ -81,6 +81,7 @@
       partidas()[idExpediente] = partida;
       DC.estado.obtener().activa = idExpediente;
       DC.estado.guardar();
+      DC.contador.evento(idExpediente, "empieza", opciones.modo);
       return partida;
     },
 
@@ -371,6 +372,7 @@
         detectives: partida.detectives,
         fallida: !!partida.fallida
       });
+      DC.contador.evento(expediente.id, partida.fallida ? "fallido" : "resuelto", partida.modo);
     },
 
     /** @returns {boolean} true si el expediente se ha resuelto alguna vez. */
